@@ -8,7 +8,7 @@ const MODULE_META = {
   MEMES:   { icon: "🎭", label: "Meme Forge", color: "#aa44ff" },
 };
 
-const API = "http://localhost:3001/api/chat";
+const API = "https://ayaan-os.onrender.com/api/chat";
 
 async function askAI(prompt) {
   const res = await fetch(API, {
