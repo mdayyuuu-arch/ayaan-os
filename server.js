@@ -17,7 +17,7 @@ app.post('/api/chat', async (req, res) => {
   } catch (e) { res.status(500).json({ error: e.message }); }
 });
 app.use(express.static(path.join(__dirname, 'build')));
-app.get('*', (req, res) => {
+app.get('/*splat', (req, res) => {
   res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
 app.listen(3001, () => console.log('Proxy running on port 3001'));
